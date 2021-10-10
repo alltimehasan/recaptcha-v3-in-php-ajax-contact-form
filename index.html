@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>reCaptcha v3 in PHP AJAX Contact Form</title>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<h1>reCaptcha v3 in PHP AJAX Contact Form</h1>
+	<form action="process/process-contact.php" method="post" id="contactForm">
+		<input type="text" name="name" id="name" placeholder="Your Name" required>
+		<input type="email" name="email" id="email" placeholder="Your E-mail" required>
+		<textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+		<input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+		<button type="submit">Send</button>
+	</form>
+	<div id="responseMsg"></div>
+
+	<!-- jQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<!-- Google reCaptcha -->
+	<script src="https://www.google.com/recaptcha/api.js?render=site_key"></script>
+
+	<!-- Ajax Form -->
+	<script src="js/contact-form.js"></script>
+</body>
+</html>
